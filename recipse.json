@@ -1,0 +1,231 @@
+[
+  {
+    "id": 1,
+    "category": "burger",
+    "title": "🍔 Бургер Classic",
+    "price": "185 грн",
+    "ingredients": "булочка, яловичина, сир, салат, соус",
+    "image": "Food/burgerClasic.jpg",
+    "instructions": "Підсмажити булочку. Посмажити котлету. Додати сир, салат та соус."
+  },
+  {
+    "id": 2,
+    "category": "burger",
+    "title": "🍔 Чізбургер",
+    "price": "170 грн",
+    "ingredients": "булочка, котлета, сир чедер, кетчуп",
+    "image": "Food/cheessburger",
+    "instructions": "Обсмажити котлету. Додати сир і кетчуп."
+  },
+  {
+    "id": 3,
+    "category": "burger",
+    "title": "🍔 Бургер BBQ",
+    "price": "220 грн",
+    "ingredients": "яловичина, бекон, сир, BBQ соус",
+    "image": "fo",
+    "instructions": "Посмажити м’ясо. Додати бекон і BBQ соус."
+  },
+  {
+    "id": 4,
+    "category": "burger",
+    "title": "🍔 Double Burger",
+    "price": "260 грн",
+    "ingredients": "2 котлети, сир, салат, соус",
+    "image": "Food/double.jpg",
+    "instructions": "Посмажити дві котлети. Зібрати бургер."
+  },
+  {
+    "id": 5,
+    "category": "burger",
+    "title": "🍔 Bacon Deluxe",
+    "price": "275 грн",
+    "ingredients": "яловичина, бекон, сир чедер, салат, помідор",
+    "image": "Food/bacon.jpg",
+    "instructions": "Посмажити м’ясо і бекон. Зібрати бургер."
+  },
+
+  {
+    "id": 6,
+    "category": "hotdog",
+    "title": "🌭 Хот-дог Classic",
+    "price": "120 грн",
+    "ingredients": "сосиска, булочка, кетчуп, гірчиця",
+    "image": "Food/hotdog-classic.jpg",
+    "instructions": "Підігріти сосиску. Зібрати хот-дог."
+  },
+  {
+    "id": 7,
+    "category": "hotdog",
+    "title": "🌭 Французький хот-дог",
+    "price": "135 грн",
+    "ingredients": "сосиска, багет, сирний соус",
+    "image": "Food/french.jpg",
+    "instructions": "Покласти сосиску в багет і додати соус."
+  },
+  {
+    "id": 8,
+    "category": "hotdog",
+    "title": "🌭 Хот-дог BBQ",
+    "price": "165 грн",
+    "ingredients": "сосиска, бекон, BBQ соус",
+    "image": "Food/hotdog-bbq.jpg",
+    "instructions": "Підсмажити сосиску і бекон."
+  },
+  {
+    "id": 9,
+    "category": "hotdog",
+    "title": "🌭 Сирний хот-дог",
+    "price": "170 грн",
+    "ingredients": "сосиска, сир, соус",
+    "image": "Food/cheese-hotdog.jpg",
+    "instructions": "Додати сир і соус."
+  },
+  {
+    "id": 10,
+    "category": "hotdog",
+    "title": "🌭 Гострий хот-дог",
+    "price": "175 грн",
+    "ingredients": "сосиска, халапеньйо, гострий соус",
+    "image": "Food/spicy.jpg",
+    "instructions": "Додати гострий соус і перець."
+  },
+
+  {
+    "id": 11,
+    "category": "shawarma",
+    "title": "🌯 Шаурма Chicken",
+    "price": "165 грн",
+    "ingredients": "курка, лаваш, овочі, соус",
+    "image": "Food/shawarma-chicken.jpg",
+    "instructions": "Обсмажити курку і загорнути в лаваш."
+  },
+  {
+    "id": 12,
+    "category": "shawarma",
+    "title": "🌯 Шаурма сирна",
+    "price": "195 грн",
+    "ingredients": "курка, сир чедер, овочі",
+    "image": "Food/shawarma-cheese.jpg",
+    "instructions": "Додати сир і загорнути."
+  },
+  {
+    "id": 13,
+    "category": "shawarma",
+    "title": "🌯 Шаурма BBQ",
+    "price": "225 грн",
+    "ingredients": "м’ясо, бекон, BBQ соус",
+    "image": "Food/shawarma-bbq.jpg",
+    "instructions": "Посмажити м’ясо і додати соус."
+  },
+  {
+    "id": 14,
+    "category": "shawarma",
+    "title": "🌯 Шаурма гостра",
+    "price": "205 грн",
+    "ingredients": "курка, халапеньйо, гострий соус",
+    "image": "Food/shawarma-hot.jpg",
+    "instructions": "Додати гострий соус."
+  },
+  {
+    "id": 15,
+    "category": "shawarma",
+    "title": "🌯 Міні шаурма",
+    "price": "125 грн",
+    "ingredients": "курка, овочі, соус",
+    "image": "Food/shawarma-mini.jpg",
+    "instructions": "Маленька порція шаурми."
+  },
+
+  {
+    "id": 16,
+    "category": "fries",
+    "title": "🍟 Картопля фрі мала",
+    "price": "85 грн",
+    "ingredients": "картопля, сіль",
+    "image": "Food/fries-small.jpg",
+    "instructions": "Посмажити картоплю."
+  },
+  {
+    "id": 17,
+    "category": "fries",
+    "title": "🍟 Картопля фрі велика",
+    "price": "120 грн",
+    "ingredients": "картопля, спеції",
+    "image": "Food/fries-big.jpg",
+    "instructions": "Смажити у фритюрі."
+  },
+  {
+    "id": 18,
+    "category": "fries",
+    "title": "🥔 Картопля по-селянськи",
+    "price": "110 грн",
+    "ingredients": "картопля дольками, спеції",
+    "image": "Food/village.jpg",
+    "instructions": "Запекти в духовці."
+  },
+  {
+    "id": 19,
+    "category": "fries",
+    "title": "🧀 Картопля фрі з сиром",
+    "price": "145 грн",
+    "ingredients": "фрі, сирний соус",
+    "image": "Food/cheese-fries.jpg",
+    "instructions": "Додати сирний соус."
+  },
+  {
+    "id": 20,
+    "category": "fries",
+    "title": "🥓 Картопля з беконом",
+    "price": "165 грн",
+    "ingredients": "картопля, бекон",
+    "image": "Food/bacon-fries.jpg",
+    "instructions": "Додати бекон."
+  },
+
+  {
+    "id": 21,
+    "category": "pizza",
+    "title": "🍕 Маргарита",
+    "price": "210 грн",
+    "ingredients": "томатний соус, моцарела, базилік",
+    "image": "Food/margarita.jpg",
+    "instructions": "Випікати 12 хвилин."
+  },
+  {
+    "id": 22,
+    "category": "pizza",
+    "title": "🍕 Гавайська",
+    "price": "255 грн",
+    "ingredients": "курка, ананас, сир",
+    "image": "Food/hawaiian.jpg",
+    "instructions": "Випікати 12 хвилин."
+  },
+  {
+    "id": 23,
+    "category": "pizza",
+    "title": "🍕 Карбонара",
+    "price": "275 грн",
+    "ingredients": "бекон, вершковий соус",
+    "image": "Food/carbonara.jpg",
+    "instructions": "Випікати 12 хвилин."
+  },
+  {
+    "id": 24,
+    "category": "pizza",
+    "title": "🍕 Салямі",
+    "price": "250 грн",
+    "ingredients": "салямі, сир",
+    "image": "Food/salami.jpg",
+    "instructions": "Випікати 12 хвилин."
+  },
+  {
+    "id": 25,
+    "category": "pizza",
+    "title": "🍕 Фермерська",
+    "price": "270 грн",
+    "ingredients": "шинка, гриби, кукурудза",
+    "image": "Food/farm.jpg",
+    "instructions": "Випікати 12 хвилин."
+  }
+]

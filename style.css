@@ -1,0 +1,223 @@
+
+
+main {
+    padding: 40px 80px;
+    background-image: url( Food/Фон.jpg);
+}
+
+header {
+    width: 100%;
+    height: 90px;
+    background: white;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 60px;
+
+    box-shadow: 0 5px 20px rgba(0,0,0,0.08);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo img {
+    width: 40px;
+}
+
+.logo h2 {
+    font-size: 32px;
+    font-weight: 700;
+    color: #1E1E1E;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #1E1E1E;
+    font-size: 18px;
+    font-weight: 500;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #FFB800;
+}
+
+.header-actions {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+}
+
+.header-actions img {
+    width: 24px;
+    cursor: pointer;
+}
+
+button {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+
+    padding: 12px 22px;
+
+    border: none;
+    border-radius: 12px;
+
+    background: #FFB800;
+    color: white;
+
+    font-size: 16px;
+    font-weight: 600;
+
+    cursor: pointer;
+}
+
+
+.home {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 25px;
+}
+
+
+
+.home nav {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 30px;
+}
+
+/* CARD */
+
+.food {
+    background: #f1ecec;
+    border-radius: 28px;
+    overflow: hidden;
+    padding: 14px;
+    box-shadow: 0 8px 20px rgba(0,0,0,0.15);
+
+    display: flex;
+    flex-direction: column;
+}
+
+
+.food:hover {
+    transform: translateY(-6px);
+}
+
+/* ФОТО */
+
+.food img {
+    width: 100%;
+    height: 240px;
+    object-fit: cover;
+    border-radius: 20px;
+}
+
+/* НИЖНІЙ БЛОК */
+
+.item {
+    margin-top: 14px;
+    background: #5c5c5c;
+    border-radius: 20px;
+    padding: 18px;
+    color: white;
+
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+
+/* НАЗВА */
+
+.item h2:nth-child(2) {
+    background: #ececec;
+    color: #444;
+    width: fit-content;
+    padding: 8px 16px;
+    border-radius: 14px;
+    font-size: 20px;
+}
+
+/* ЦІНА */
+
+.item h2:nth-child(2) {
+    background: #e7e7e7;
+    color: #444;
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 14px;
+    font-size: 22px;
+    margin-bottom: 16px;
+}
+
+/* ОПИС */
+
+.item h3 {
+    color: #ececec;
+    font-size: 18px;
+    font-weight: 400;
+    line-height: 1.5;
+}
+
+/* КНОПКА */
+
+.order-btn {
+    margin-top: 10px;
+    padding: 14px;
+    border: none;
+    border-radius: 14px;
+    background: #ff9100;
+    color: white;
+    font-size: 17px;
+    font-weight: 700;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.order-btn:hover {
+    background: #e67f00;
+}
+
+.modal {
+    display: none;
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,0.7);
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+}
+
+.modal-content {
+    background: white;
+    width: 500px;
+    padding: 30px;
+    border-radius: 24px;
+    position: relative;
+}
+
+.modal-content img {
+    width: 100%;
+    border-radius: 20px;
+    margin-bottom: 20px;
+}
+
+#closeModalBtn {
+    position: absolute;
+    top: 15px;
+    right: 20px;
+    font-size: 32px;
+    cursor: pointer;
+}
