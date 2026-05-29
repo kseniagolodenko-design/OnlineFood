@@ -4,27 +4,27 @@
     "category": "burger",
     "title": "🍔 Бургер Classic",
     "price": "185 грн",
-    "ingredients": "булочка, яловичина, сир, салат, соус",
-    "image": "Food/burgerClasic.jpg",
-    "instructions": "Підсмажити булочку. Посмажити котлету. Додати сир, салат та соус."
+    "ingredients": "булочка для бургера, яловича котлета 100%, сир, салат, помідор, соус",
+    "image": "Food/burger-clasic.jpg",
+    "instructions": "Булочку підсмажити. Котлету обсмажити 3–5 хв з кожного боку. Додати сир на гарячу котлету. Зібрати бургер з салатом, помідором і соусом."
   },
   {
     "id": 2,
     "category": "burger",
     "title": "🍔 Чізбургер",
     "price": "170 грн",
-    "ingredients": "булочка, котлета, сир чедер, кетчуп",
-    "image": "Food/cheessburger",
-    "instructions": "Обсмажити котлету. Додати сир і кетчуп."
+    "ingredients": "булочка, яловича котлета, сир чедер, кетчуп, гірчиця",
+    "image": "Food/cheessburger.jpg",
+    "instructions": "Посмажити котлету. Додати сир чедер щоб розплавився. Зібрати з соусами в булці."
   },
   {
     "id": 3,
     "category": "burger",
     "title": "🍔 Бургер BBQ",
     "price": "220 грн",
-    "ingredients": "яловичина, бекон, сир, BBQ соус",
-    "image": "fo",
-    "instructions": "Посмажити м’ясо. Додати бекон і BBQ соус."
+    "ingredients": "яловичина, бекон, сир, BBQ соус, огірок",
+    "image": "Food/bbq-burger.jpg",
+    "instructions": "Обсмажити м’ясо і бекон. Додати BBQ соус і огірок. Зібрати бургер."
   },
   {
     "id": 4,
@@ -32,17 +32,17 @@
     "title": "🍔 Double Burger",
     "price": "260 грн",
     "ingredients": "2 котлети, сир, салат, соус",
-    "image": "Food/double.jpg",
-    "instructions": "Посмажити дві котлети. Зібрати бургер."
+    "image": "Food/doubleBurger.jpg",
+    "instructions": "Посмажити дві котлети. Зібрати з сиром і соусом."
   },
   {
     "id": 5,
     "category": "burger",
     "title": "🍔 Bacon Deluxe",
     "price": "275 грн",
-    "ingredients": "яловичина, бекон, сир чедер, салат, помідор",
-    "image": "Food/bacon.jpg",
-    "instructions": "Посмажити м’ясо і бекон. Зібрати бургер."
+    "ingredients": "яловичина, бекон, сир, салат, помідор",
+    "image": "Food/baconDeluxe.jpg",
+    "instructions": "Посмажити м’ясо і бекон. Зібрати з овочами."
   },
 
   {
@@ -51,8 +51,8 @@
     "title": "🌭 Хот-дог Classic",
     "price": "120 грн",
     "ingredients": "сосиска, булочка, кетчуп, гірчиця",
-    "image": "Food/hotdog-classic.jpg",
-    "instructions": "Підігріти сосиску. Зібрати хот-дог."
+    "image": "Food/hot-dogCLasick.jpg",
+    "instructions": "Підігріти сосиску. Покласти в булку. Додати соуси."
   },
   {
     "id": 7,
@@ -60,8 +60,8 @@
     "title": "🌭 Французький хот-дог",
     "price": "135 грн",
     "ingredients": "сосиска, багет, сирний соус",
-    "image": "Food/french.jpg",
-    "instructions": "Покласти сосиску в багет і додати соус."
+    "image": "Food/french-dog.jpg",
+    "instructions": "Обсмажити сосиску. Покласти в багет і додати соус."
   },
   {
     "id": 8,
@@ -69,8 +69,8 @@
     "title": "🌭 Хот-дог BBQ",
     "price": "165 грн",
     "ingredients": "сосиска, бекон, BBQ соус",
-    "image": "Food/hotdog-bbq.jpg",
-    "instructions": "Підсмажити сосиску і бекон."
+    "image": "Food/bbq-dog.jpg",
+    "instructions": "Обсмажити сосиску і бекон. Додати соус."
   },
   {
     "id": 9,
@@ -78,8 +78,8 @@
     "title": "🌭 Сирний хот-дог",
     "price": "170 грн",
     "ingredients": "сосиска, сир, соус",
-    "image": "Food/cheese-hotdog.jpg",
-    "instructions": "Додати сир і соус."
+    "image": "Food/cheess-dog.jpg",
+    "instructions": "Додати сир і соус до сосиски."
   },
   {
     "id": 10,
@@ -87,7 +87,7 @@
     "title": "🌭 Гострий хот-дог",
     "price": "175 грн",
     "ingredients": "сосиска, халапеньйо, гострий соус",
-    "image": "Food/spicy.jpg",
+    "image": "Food/hot-dog.jpg",
     "instructions": "Додати гострий соус і перець."
   },
 
@@ -96,45 +96,45 @@
     "category": "shawarma",
     "title": "🌯 Шаурма Chicken",
     "price": "165 грн",
-    "ingredients": "курка, лаваш, овочі, соус",
-    "image": "Food/shawarma-chicken.jpg",
-    "instructions": "Обсмажити курку і загорнути в лаваш."
+    "ingredients": "лаваш, курка, капуста, помідор, огірок, соус",
+    "image": "Food/Chicken-shaurma.jpg",
+    "instructions": "Обсмажити курку. Додати овочі і загорнути."
   },
   {
     "id": 12,
     "category": "shawarma",
     "title": "🌯 Шаурма сирна",
     "price": "195 грн",
-    "ingredients": "курка, сир чедер, овочі",
-    "image": "Food/shawarma-cheese.jpg",
-    "instructions": "Додати сир і загорнути."
+    "ingredients": "лаваш, курка, сир чедер, овочі",
+    "image": "Food/cheess-shaurma.jpg",
+    "instructions": "Додати сир і курку в лаваш."
   },
   {
     "id": 13,
     "category": "shawarma",
     "title": "🌯 Шаурма BBQ",
     "price": "225 грн",
-    "ingredients": "м’ясо, бекон, BBQ соус",
-    "image": "Food/shawarma-bbq.jpg",
-    "instructions": "Посмажити м’ясо і додати соус."
+    "ingredients": "лаваш, м’ясо, бекон, BBQ соус",
+    "image": "Food/bbq-shaurma.jpg",
+    "instructions": "Обсмажити м’ясо і додати соус."
   },
   {
     "id": 14,
     "category": "shawarma",
     "title": "🌯 Шаурма гостра",
     "price": "205 грн",
-    "ingredients": "курка, халапеньйо, гострий соус",
-    "image": "Food/shawarma-hot.jpg",
-    "instructions": "Додати гострий соус."
+    "ingredients": "лаваш, курка, халапеньйо, соус",
+    "image": "Food/hot-shaurma.jpg",
+    "instructions": "Додати гострі інгредієнти."
   },
   {
     "id": 15,
     "category": "shawarma",
     "title": "🌯 Міні шаурма",
     "price": "125 грн",
-    "ingredients": "курка, овочі, соус",
-    "image": "Food/shawarma-mini.jpg",
-    "instructions": "Маленька порція шаурми."
+    "ingredients": "лаваш, курка, овочі",
+    "image": "Food/smallShaurma.jpg",
+    "instructions": "Маленька шаурма з куркою."
   },
 
   {
@@ -143,8 +143,8 @@
     "title": "🍟 Картопля фрі мала",
     "price": "85 грн",
     "ingredients": "картопля, сіль",
-    "image": "Food/fries-small.jpg",
-    "instructions": "Посмажити картоплю."
+    "image": "Food/small-potato.jpg",
+    "instructions": "Посмажити у фритюрі до золотистого кольору."
   },
   {
     "id": 17,
@@ -152,8 +152,8 @@
     "title": "🍟 Картопля фрі велика",
     "price": "120 грн",
     "ingredients": "картопля, спеції",
-    "image": "Food/fries-big.jpg",
-    "instructions": "Смажити у фритюрі."
+    "image": "Food/big-fries.jpg",
+    "instructions": "Смажити у фритюрі 4–6 хв."
   },
   {
     "id": 18,
@@ -161,17 +161,17 @@
     "title": "🥔 Картопля по-селянськи",
     "price": "110 грн",
     "ingredients": "картопля дольками, спеції",
-    "image": "Food/village.jpg",
-    "instructions": "Запекти в духовці."
+    "image": "Food/village-potato.jpg",
+    "instructions": "Запекти 30–40 хв у духовці."
   },
   {
     "id": 19,
     "category": "fries",
     "title": "🧀 Картопля фрі з сиром",
     "price": "145 грн",
-    "ingredients": "фрі, сирний соус",
-    "image": "Food/cheese-fries.jpg",
-    "instructions": "Додати сирний соус."
+    "ingredients": "картопля, сирний соус",
+    "image": "Food/cheess-fries.jpg",
+    "instructions": "Додати сирний соус до фрі."
   },
   {
     "id": 20,
@@ -180,7 +180,7 @@
     "price": "165 грн",
     "ingredients": "картопля, бекон",
     "image": "Food/bacon-fries.jpg",
-    "instructions": "Додати бекон."
+    "instructions": "Додати обсмажений бекон."
   },
 
   {
@@ -188,44 +188,44 @@
     "category": "pizza",
     "title": "🍕 Маргарита",
     "price": "210 грн",
-    "ingredients": "томатний соус, моцарела, базилік",
-    "image": "Food/margarita.jpg",
-    "instructions": "Випікати 12 хвилин."
+    "ingredients": "тісто, томатний соус, моцарела, базилік",
+    "image": "Food/margo.jpg",
+    "instructions": "Випікати 10–12 хв при 200°C."
   },
   {
     "id": 22,
     "category": "pizza",
     "title": "🍕 Гавайська",
     "price": "255 грн",
-    "ingredients": "курка, ананас, сир",
-    "image": "Food/hawaiian.jpg",
-    "instructions": "Випікати 12 хвилин."
+    "ingredients": "тісто, курка, ананас, сир",
+    "image": "Food/gavaiska.jpg",
+    "instructions": "Випікати 12 хв при 200°C."
   },
   {
     "id": 23,
     "category": "pizza",
     "title": "🍕 Карбонара",
     "price": "275 грн",
-    "ingredients": "бекон, вершковий соус",
+    "ingredients": "тісто, бекон, вершковий соус",
     "image": "Food/carbonara.jpg",
-    "instructions": "Випікати 12 хвилин."
+    "instructions": "Випікати 12 хв до готовності."
   },
   {
     "id": 24,
     "category": "pizza",
     "title": "🍕 Салямі",
     "price": "250 грн",
-    "ingredients": "салямі, сир",
+    "ingredients": "тісто, салямі, сир",
     "image": "Food/salami.jpg",
-    "instructions": "Випікати 12 хвилин."
+    "instructions": "Випікати 12 хв при 200°C."
   },
   {
     "id": 25,
     "category": "pizza",
     "title": "🍕 Фермерська",
     "price": "270 грн",
-    "ingredients": "шинка, гриби, кукурудза",
-    "image": "Food/farm.jpg",
-    "instructions": "Випікати 12 хвилин."
+    "ingredients": "тісто, шинка, гриби, кукурудза",
+    "image": "Food/ferma.jpg",
+    "instructions": "Випікати 12–15 хв до золотистої скоринки."
   }
 ]
