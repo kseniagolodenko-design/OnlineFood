@@ -176,3 +176,20 @@ searchInput.addEventListener("keydown", (e) => {
 });
 
 document.addEventListener('DOMContentLoaded', initApp);
+
+/* ORDER BUTTON */
+
+const orderButton = document.getElementById("orderButton");
+
+orderButton.addEventListener("click", () => {
+
+    if (cart.length === 0) {
+        alert("🛒 Кошик порожній!");
+        return;
+    }
+
+    alert("✅ Ваше замовлення прийнято!");
+
+    cart = [];
+    renderCart();
+});
