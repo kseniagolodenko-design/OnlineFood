@@ -1,4 +1,6 @@
 let recipesDatabase = [];
+let cart = [];
+
 
 /* LOAD JSON */
 async function initApp() {
@@ -26,9 +28,15 @@ function renderMenu(meals) {
                 <h2>${meal.price}</h2>
                 <h3>${meal.ingredients}</h3>
 
-                <button class="order-btn" data-id="${meal.id}">
-                    Як готувати
-                </button>
+                <div class="card-buttons">
+                    <button class="order-btn" data-id="${meal.id}">
+                        Як готувати
+                    </button>
+
+                    <button class="cart-btn" data-id="${meal.id}">
+                        ➕ В кошик
+                    </button>
+                </div>
             </div>
         `;
 
@@ -41,6 +49,10 @@ document.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('order-btn')) {
         openRecipe(e.target.dataset.id);
+    }
+
+    if (e.target.classList.contains('cart-btn')) {
+        addToCart(e.target.dataset.id);
     }
 
 });
@@ -163,6 +175,60 @@ const cartDropdown = document.querySelector("#cartDropdown");
 cartIcon.addEventListener("click", () => {
     cartDropdown.classList.toggle("active");
 });
+
+function addToCart(id) {
+
+    const meal = recipesDatabase.find(item => item.id == id);
+
+    if (!meal) return;
+
+    const existing = cart.find(item => item.id == id);
+
+    if (existing) {
+        existing.qty++;
+    } else {
+        cart.push({
+            id: meal.id,
+            title: meal.title,
+            price: parseInt(meal.price),
+            qty: 1
+        });
+    }
+
+    renderCart();
+}
+
+function renderCart() {
+
+    const cartItems = document.getElementById("cartItems");
+    const cartTotal = document.getElementById("cartTotal");
+    const cartCount = document.getElementById("cartCount");
+
+    cartItems.innerHTML = "";
+
+    let total = 0;
+    let count = 0;
+
+    cart.forEach(item => {
+
+        total += item.price * item.qty;
+        count += item.qty;
+
+        cartItems.innerHTML += `
+            <div class="cart-item">
+                ${item.title} × ${item.qty}
+            </div>
+        `;
+    });
+
+    cartTotal.textContent = `Разом: ${total} грн`;
+    cartCount.textContent = count;
+}
+
+function clearCart() {
+    cart = [];
+    renderCart();
+}
 
 /* ORDER BUTTON */
 const orderButton = document.querySelector("#orderButton");
