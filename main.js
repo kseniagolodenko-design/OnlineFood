@@ -1,15 +1,14 @@
 let recipesDatabase = [];
-let cart = [];
 
 /* LOAD JSON */
 async function initApp() {
-    const res = await fetch('./recipse.json'); // FIX: було recipse.json
+    const res = await fetch('./recipse.json');
     recipesDatabase = await res.json();
 
     renderMenu(recipesDatabase);
 }
 
-/* RENDER MENU */
+/* RENDER ALL FOOD */
 function renderMenu(meals) {
 
     const container = document.querySelector('.home');
@@ -22,21 +21,14 @@ function renderMenu(meals) {
 
         card.innerHTML = `
             <img src="${meal.image}" alt="${meal.title}">
-            
             <div class="item">
                 <h2>${meal.title}</h2>
                 <h2>${meal.price}</h2>
                 <h3>${meal.ingredients}</h3>
 
-                <div class="card-buttons">
-                    <button class="order-btn" data-id="${meal.id}">
-                        Як готувати
-                    </button>
-
-                    <button class="cart-btn" data-id="${meal.id}">
-                        ➕ В кошик
-                    </button>
-                </div>
+                <button class="order-btn" data-id="${meal.id}">
+                    Як готувати
+                </button>
             </div>
         `;
 
@@ -44,84 +36,16 @@ function renderMenu(meals) {
     });
 }
 
-/* CLICK EVENTS (DELEGATION) */
+/* CLICK BUTTON (DELEGATION) */
 document.addEventListener('click', (e) => {
 
     if (e.target.classList.contains('order-btn')) {
         openRecipe(e.target.dataset.id);
     }
 
-    if (e.target.classList.contains('cart-btn')) {
-        addToCart(e.target.dataset.id);
-    }
 });
 
-/* ADD TO CART */
-function addToCart(id) {
-
-    const meal = recipesDatabase.find(m => m.id == id);
-    if (!meal) return;
-
-    const existing = cart.find(item => item.id == id);
-
-    if (existing) {
-        existing.qty++;
-    } else {
-        cart.push({
-            id: meal.id,
-            title: meal.title,
-            price: parseInt(meal.price),
-            qty: 1
-        });
-    }
-
-    renderCart();
-}
-
-/* RENDER CART */
-function renderCart() {
-
-    const items = document.getElementById("cartItems");
-    const totalEl = document.getElementById("cartTotal");
-    const countEl = document.getElementById("cartCount");
-
-    items.innerHTML = '';
-
-    let total = 0;
-    let count = 0;
-
-    cart.forEach(item => {
-
-        total += item.price * item.qty;
-        count += item.qty;
-
-        const div = document.createElement("div");
-        div.className = "cart-item";
-
-        div.innerHTML = `
-            <span>${item.title} x${item.qty}</span>
-            <span>${item.price * item.qty} грн</span>
-        `;
-
-        items.appendChild(div);
-    });
-
-    totalEl.textContent = "Разом: " + total + " грн";
-    countEl.textContent = count;
-}
-
-/* CLEAR CART */
-function clearCart() {
-    cart = [];
-    renderCart();
-}
-
-/* TOGGLE CART DROPDOWN */
-document.getElementById("cartIcon").addEventListener("click", () => {
-    document.getElementById("cartDropdown").classList.toggle("active");
-});
-
-/* OPEN RECIPE */
+/* OPEN MODAL */
 function openRecipe(id) {
 
     const meal = recipesDatabase.find(m => m.id == id);
@@ -137,52 +61,113 @@ function openRecipe(id) {
 }
 
 /* CLOSE MODAL */
-document.getElementById('closeModalBtn').onclick = () => {
+function closeModal() {
     document.getElementById('recipeModal').style.display = 'none';
-};
+}
+
+document.getElementById('closeModalBtn').onclick = closeModal;
 
 document.getElementById('recipeModal').onclick = (e) => {
-    if (e.target.id === 'recipeModal') {
-        document.getElementById('recipeModal').style.display = 'none';
-    }
+    if (e.target.id === 'recipeModal') closeModal();
 };
-
-/* NAV ACTIVE */
-document.querySelectorAll("nav a").forEach(link => {
-
-    link.addEventListener("click", (e) => {
-        e.preventDefault();
-
-        document.querySelectorAll("nav a").forEach(a => a.classList.remove("active"));
-        link.classList.add("active");
-    });
-});
-
-/* SEARCH */
-const searchInput = document.querySelector("#searchInput");
-
-searchInput.addEventListener("keydown", (e) => {
-
-    if (e.key === "Enter") {
-
-        const value = searchInput.value.toLowerCase();
-
-        const filtered = recipesDatabase.filter(item =>
-            item.title.toLowerCase().includes(value)
-        );
-
-        renderMenu(filtered);
-    }
-});
 
 document.addEventListener('DOMContentLoaded', initApp);
 
-/* ORDER BUTTON */
 
-const orderButton = document.getElementById("orderButton");
+
+/* NAV SCROLL */
+const navLinks = document.querySelectorAll("nav a");
+
+navLinks.forEach(link => {
+    link.addEventListener("click", (e) => {
+        e.preventDefault();
+
+        navLinks.forEach(a => a.classList.remove("active"));
+        link.classList.add("active");
+
+        const category = link.dataset.category;
+
+        // показуємо всі товари перед скролом
+        renderMenu(recipesDatabase);
+
+        setTimeout(() => {
+            const index = recipesDatabase.findIndex(item => item.category === category);
+            const cards = document.querySelectorAll(".food");
+
+            if (index !== -1 && cards[index]) {
+                const headerHeight = document.querySelector("header").offsetHeight;
+
+                const position = cards[index].getBoundingClientRect().top + window.scrollY - headerHeight - 20;
+
+                window.scrollTo({
+                    top: position,
+                    behavior: "smooth"
+                });
+            }
+        }, 100);
+    });
+});
+
+/* HEADER SEARCH */
+const searchInput = document.querySelector("#searchInput");
+const searchIcon = document.querySelector("#searchIcon");
+
+function headerSearch() {
+    const text = searchInput.value.trim().toLowerCase();
+
+    if (text === "") {
+        renderMenu(recipesDatabase);
+        return;
+    }
+
+    const filtered = recipesDatabase.filter(item => {
+        const title = item.title.toLowerCase();
+        const ingredients = item.ingredients.toLowerCase();
+        const category = item.category.toLowerCase();
+
+        const categoryUa =
+            category === "burger" ? "бургер бургери" :
+            category === "pizza" ? "піца пица" :
+            category === "shawarma" ? "шаурма шаверма" :
+            category === "fries" ? "картопля фрі картошка" :
+            category === "hotdog" ? "хот дог хот-дог хотдог" :
+            "";
+
+        return (
+            title.includes(text) ||
+            ingredients.includes(text) ||
+            category.includes(text) ||
+            categoryUa.includes(text)
+        );
+    });
+
+    renderMenu(filtered);
+
+    if (filtered.length === 0) {
+        alert("Нічого не знайдено 😕");
+    }
+}
+
+searchIcon.addEventListener("click", headerSearch);
+
+searchInput.addEventListener("keydown", (event) => {
+    if (event.key === "Enter") {
+        headerSearch();
+    }
+});
+
+/* CART DROPDOWN */
+const cartIcon = document.querySelector("#cartIcon");
+const cartDropdown = document.querySelector("#cartDropdown");
+
+cartIcon.addEventListener("click", () => {
+    cartDropdown.classList.toggle("active");
+});
+
+/* ORDER BUTTON */
+const orderButton = document.querySelector("#orderButton");
 
 orderButton.addEventListener("click", () => {
-
     if (cart.length === 0) {
         alert("🛒 Кошик порожній!");
         return;
